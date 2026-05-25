@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
-
 echo "=== LTX-2.3 — установка моделей (Boris Edition) ==="
-
 mkdir -p /workspace/ComfyUI/models/checkpoints/LTX2.3
 mkdir -p /workspace/ComfyUI/models/loras/LTX2.3
 mkdir -p /workspace/ComfyUI/models/text_encoders/LTX2.3
@@ -40,5 +38,21 @@ wget -O /workspace/ComfyUI/models/vae/LTX2.3/LTX23_video_vae_bf16.safetensors \
 echo "=== Spatial Upscaler x2 v1.1 (1GB) ==="
 wget -O /workspace/ComfyUI/models/latent_upscale_models/ltx-2.3-spatial-upscaler-x2-1.1.safetensors \
 "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.1.safetensors?download=true"
+
+echo "=== LoRA: NSFW Posing Nude v1.11 (1GB) ==="
+wget -O /workspace/ComfyUI/models/loras/LTX2.3/LTX23_nsfw_posing_nude_v1_11.safetensors \
+"https://huggingface.co/borisf/ltx23-loras/resolve/main/LTX23_nsfw_posing_nude_v1_11.safetensors?download=true"
+
+echo "=== LoRA: Sexy Move i2v (617MB) ==="
+wget -O /workspace/ComfyUI/models/loras/LTX2.3/LTX2-i2v-SexyMove.safetensors \
+"https://huggingface.co/borisf/ltx23-loras/resolve/main/LTX2-i2v-SexyMove.safetensors?download=true"
+
+echo "=== LoRA: Oral Suite i2v (1.23GB) ==="
+wget -O /workspace/ComfyUI/models/loras/LTX2.3/LTX2-i2v-OralSuite.safetensors \
+"https://huggingface.co/borisf/ltx23-loras/resolve/main/LTX2-i2v-OralSuite.safetensors?download=true"
+
+echo "=== LoRA: DemoPose (403MB) ==="
+wget -O /workspace/ComfyUI/models/loras/LTX2.3/ltx23__demopose_d3m0p0s3.safetensors \
+"https://huggingface.co/borisf/ltx23-loras/resolve/main/ltx23__demopose_d3m0p0s3.safetensors?download=true"
 
 echo "=== Все модели LTX-2.3 загружены! ==="

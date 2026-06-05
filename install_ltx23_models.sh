@@ -55,4 +55,16 @@ echo "=== LoRA: DemoPose (403MB) ==="
 wget -O /workspace/ComfyUI/models/loras/LTX2.3/ltx23__demopose_d3m0p0s3.safetensors \
 "https://huggingface.co/borisf/ltx23-loras/resolve/main/ltx23__demopose_d3m0p0s3.safetensors?download=true"
 
+echo "=== LoRA: 5Fingering (856MB) ==="
+wget -O /workspace/ComfyUI/models/loras/LTX2.3/5fingering-ltx-mfng-step00004500.safetensors \
+"https://huggingface.co/borisf/ltx23-loras/resolve/main/5fingering-ltx-mfng-step00004500.safetensors?download=true"
+
+echo "=== LoRA: Female Masturbation (19MB) ==="
+wget -O /workspace/ComfyUI/models/loras/LTX2.3/Female_Masturbation_Solo_Sex_Naked__Nude.safetensors \
+"https://huggingface.co/borisf/ltx23-loras/resolve/main/Female_Masturbation_Solo_Sex_Naked__Nude.safetensors?download=true"
+
+echo "=== LoRA: Deep Throat v01 (1.16GB) ==="
+wget -O /workspace/ComfyUI/models/loras/LTX2.3/ltxdeepthroat_v01.safetensors \
+"https://huggingface.co/borisf/ltx23-loras/resolve/main/ltxdeepthroat_v01.safetensors?download=true"
+
 echo "=== Все модели LTX-2.3 загружены! ==="

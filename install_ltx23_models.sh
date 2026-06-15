@@ -7,6 +7,16 @@ mkdir -p /workspace/ComfyUI/models/text_encoders/LTX2.3
 mkdir -p /workspace/ComfyUI/models/vae/LTX2.3
 mkdir -p /workspace/ComfyUI/models/latent_upscale_models
 
+echo "=== Установка ComfyUI-LTXVideo от Lightricks ==="
+cd /workspace/ComfyUI/custom_nodes
+if [ -d "ComfyUI-LTXVideo" ]; then
+  echo "ComfyUI-LTXVideo уже есть, обновляем..."
+  cd ComfyUI-LTXVideo && git pull && cd ..
+else
+  git clone https://github.com/Lightricks/ComfyUI-LTXVideo
+fi
+pip install -r /workspace/ComfyUI/custom_nodes/ComfyUI-LTXVideo/requirements.txt --break-system-packages
+
 echo "=== Основная модель dev fp8 (28GB) ==="
 wget -O /workspace/ComfyUI/models/checkpoints/LTX2.3/ltx-2.3-22b-dev-fp8.safetensors \
 "https://huggingface.co/Lightricks/LTX-2.3-fp8/resolve/main/ltx-2.3-22b-dev-fp8.safetensors?download=true"
